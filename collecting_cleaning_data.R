@@ -38,10 +38,10 @@ ECDC_data <- ECDC_raw %>%
                    Time, `R - resistant isolates`, `R - resistant isolates, percentage`,
                    `Total tested isolates`, RegionName))
 
-# make Belgium dataframe
+# make Slovenia dataframe
 
-ECDC_data_BE <- ECDC_data %>%
-  filter(grepl("Belgium",Region), # select country data
+ECDC_data_SI <- ECDC_data %>%
+  filter(grepl("Slovenia",Region), # select country data
          grepl("Escherichia", Pathogen), # select pathogen(s) to consider
          grepl("Aminopenicill|Third-gene|Fluoroqu", Antimicrobial))%>% #select antibiotics relevant to intersectoral comparisons
   mutate(Surveillance = "EARS",
@@ -126,7 +126,7 @@ load_amr_2025 <- function(path) {
     ) %>%
     mutate(
       Host = animal,
-      Region = if_else(grepl("EU",region),"Europe","Belgium"),
+      Region = if_else(grepl("EU",region),"Europe","Slovenia"),
       Year   = as.integer(year),
       value  = as.numeric(str_remove(value, "%|,"))
     ) %>%
