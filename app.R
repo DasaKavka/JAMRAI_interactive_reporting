@@ -382,15 +382,15 @@ body <- dashboardBody(
                                             selected = c("Escherichia coli"))),
               column(4,
                      awesomeCheckboxGroup("region", label = h3("Select Region"),
-                                          choices = c("Belgium","Europe"),
-                                          selected = c("Belgium","Europe")))),
+                                          choices = c("Slovenia","Europe"),
+                                          selected = c("Slovenia","Europe")))),
               
               fluidRow(plotOutput("amr_fig",height = "800px"),
                        fluidRow(
                          column(2,
                          materialSwitch(
                            inputId = "amr_ss1",
-                           label = "Show Belgian sample sizes",
+                           label = "Show Slovenian sample sizes",
                            status = "primary",
                            right = TRUE
                          ) ),
@@ -476,7 +476,7 @@ server <- function(input, output, session) {
     amr_select_bact = "Escherichia coli",
     amr_select_antib = "Aminopenicillins",
     amr_select_host = "Human:Blood or CSF",
-    amr_select_region = c("Belgium","Europe"),
+    amr_select_region = c("Slovenia","Europe"),
     # AMR_text = paste(h_ec_text),
     # AMR_fig_text = h_ec_fig_leg,
     amr_fig_data = comparative_AMR_data %>%
@@ -489,7 +489,7 @@ server <- function(input, output, session) {
     
     # define contributors reactive
     chose_analysis_type = "Human- E. coli",
-    Contributor = "Sciensano",
+    Contributor = "IMI, NLZOH",
     Report = "EARS-be and NSIH-AMR",
     Report_website  = "https://www.sciensano.be/en/about-sciensano/sciensanos-organogram/healthcare-associated-infections-and-antimicrobial-resistance"
     
@@ -508,7 +508,7 @@ server <- function(input, output, session) {
     global$amr_select_bact <-  input$bact
     if(global$amr_sample_size == TRUE){
       global$amr_fig_data = comparative_AMR_data %>%
-        mutate(Sample_size = if_else(grepl("Belgium",Region),as.character(Sample_size.x), "")) %>%
+        mutate(Sample_size = if_else(grepl("Slovenia",Region),as.character(Sample_size.x), "")) %>%
         filter(grepl(paste( global$amr_select_bact, collapse = "|"), Pathogen),               
                grepl(paste( global$amr_select_region, collapse = "|"), Region),
                grepl(global$amr_select_antib, Antimicrobial),
@@ -529,7 +529,7 @@ server <- function(input, output, session) {
     global$amr_select_region <-  input$region
     if(global$amr_sample_size == TRUE){
       global$amr_fig_data = comparative_AMR_data %>%
-        mutate(Sample_size = if_else(grepl("Belgium",Region),as.character(Sample_size.x), "")) %>%
+        mutate(Sample_size = if_else(grepl("Slovenia",Region),as.character(Sample_size.x), "")) %>%
         filter(grepl(paste( global$amr_select_bact, collapse = "|"), Pathogen),
                grepl(paste( global$amr_select_region, collapse = "|"), Region),
                grepl(global$amr_select_antib, Antimicrobial),
@@ -552,7 +552,7 @@ server <- function(input, output, session) {
     global$amr_select_antib <-  input$antibiotic
     if(global$amr_sample_size == TRUE){
       global$amr_fig_data = comparative_AMR_data %>%
-        mutate(Sample_size = if_else(grepl("Belgium",Region),as.character(Sample_size.x), "")) %>%
+        mutate(Sample_size = if_else(grepl("Slovenia",Region),as.character(Sample_size.x), "")) %>%
         filter(grepl(paste( global$amr_select_bact, collapse = "|"), Pathogen),
                grepl(paste( global$amr_select_region, collapse = "|"), Region),
                grepl(global$amr_select_antib, Antimicrobial),
@@ -576,7 +576,7 @@ server <- function(input, output, session) {
     global$amr_select_host <-  input$host
     if(global$amr_sample_size == TRUE){
       global$amr_fig_data = comparative_AMR_data %>%
-        mutate(Sample_size = if_else(grepl("Belgium",Region),as.character(Sample_size.x), "")) %>%
+        mutate(Sample_size = if_else(grepl("Slovenia",Region),as.character(Sample_size.x), "")) %>%
         filter(grepl(paste( global$amr_select_bact, collapse = "|"), Pathogen),
                grepl(paste( global$amr_select_region, collapse = "|"), Region),
                grepl(global$amr_select_antib, Antimicrobial),
@@ -599,7 +599,7 @@ server <- function(input, output, session) {
     global$amr_sample_size <-  input$amr_ss1
     if(global$amr_sample_size  == TRUE){
       global$amr_fig_data = comparative_AMR_data %>%
-        mutate(Sample_size = if_else(grepl("Belgium",Region),as.character(Sample_size.x), "")) %>%
+        mutate(Sample_size = if_else(grepl("Slovenia",Region),as.character(Sample_size.x), "")) %>%
         filter(grepl(paste(global$amr_select_bact, collapse = "|"), Pathogen),
                grepl(paste( global$amr_select_region, collapse = "|"), Region),
                grepl(global$amr_select_antib, Antimicrobial),
