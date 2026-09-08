@@ -3,6 +3,12 @@
 # gets its own filters, own year range, own curve/radar toggle, own D3 output.
 # The "Add another chart" button (wired in server.R) inserts more of these at
 # runtime — nothing about the number of charts is fixed ahead of time.
+#
+# Palette + "recolour/hide a region from the legend" behaviour are shared with
+# the AMC and comparison modules via src/chart_helpers.R (region_color_state).
+# amrChartServer() RETURNS its year-clipped filtered data (+ selected years) so
+# the AMR/AMC comparison tab can pair it with the AMC series (no duplicated
+# filtering).
 
 amrChartUI <- function(id) {
   ns <- NS(id)
@@ -73,31 +79,7 @@ amrChartServer <- function(id, comparative_AMR_data) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    # default palette in R, overridable by clicking a legend swatch in the D3
-    # (this instance's own picks — independent from any other chart's)
-    DEFAULT_PALETTE <- c("#078BAD", "#0FDBD5", "#1f77b4", "#e4572e", "#2ca02c", "#9467bd", "#8c564b", "#333333")
-    user_region_cols <- reactiveValues()
-    observeEvent(input$amr_color_pick, {
-      pk <- input$amr_color_pick
-      if (!is.null(pk$region) && !is.null(pk$color)) user_region_cols[[pk$region]] <- pk$color
-    })
-
-    # click a legend swatch/label to hide or show that region's curve(s)
-    # (independent per chart instance, same on/off pattern as the colour pick)
-    user_region_hidden <- reactiveValues()
-    observeEvent(input$amr_region_toggle, {
-      r <- input$amr_region_toggle
-      if (!is.null(r) && nzchar(r)) user_region_hidden[[r]] <- !isTRUE(user_region_hidden[[r]])
-    })
-
-    # click the "GLM trend" legend entry to hide/show the forecast (dashed
-    # line + CI ribbon) for every region at once — separate from the
-    # per-region toggle above, which only affects the observed curve
-    trend_hidden <- reactiveVal(FALSE)
-    observeEvent(input$amr_trend_toggle, {
-      trend_hidden(!trend_hidden())
-    })
-
+    # rows matching this instance's filters (species / region / antibiotic / host)
     amr_fig_data <- reactive({
       d <- comparative_AMR_data %>%
         filter(grepl(paste(input$bact, collapse = "|"), Pathogen),
@@ -112,47 +94,51 @@ amrChartServer <- function(id, comparative_AMR_data) {
       d
     })
 
-    amr_cols <- reactive({
-      regs <- sort(unique(as.character(amr_fig_data()$Region)))
-      if (length(regs) == 0) return(setNames(character(0), character(0)))
-      cols <- setNames(DEFAULT_PALETTE[((seq_along(regs) - 1) %% length(DEFAULT_PALETTE)) + 1], regs)
-      for (r in names(cols)) {
-        uc <- user_region_cols[[r]]
-        if (!is.null(uc) && nzchar(uc)) cols[[r]] <- uc
-      }
-      cols
-    })
-
-    output$AMR_text <- renderText({ AMR_text_outline })
-    output$AMR_fig_text <- renderText({ AMR_fig_text_outline })
-
-    output$amr_d3 <- renderD3({
+    # the same rows clipped to the selected year range — the exact data drawn by
+    # the D3 chart, and what the comparison tab consumes for the quadrant scatter
+    amr_plot_data <- reactive({
       d <- amr_fig_data()
-      # carry the raw sample size so it always shows in the tooltip (n = ...)
       if (!"Sample_size.x" %in% names(d)) d$Sample_size.x <- NA
       yr <- input$year_amr1
       d <- d[!is.na(d$Year) & d$Year >= min(yr) & d$Year <= max(yr),
              c("Year", "Region", "Host", "Percent_resistant",
                "Percent_resistant_predict", "CI_lower", "CI_upper", "Sample_size.x")]
       names(d)[names(d) == "Sample_size.x"] <- "Sample_size"
+      d
+    })
+
+    # shared palette + recolour/hide-region wiring (src/chart_helpers.R)
+    state <- region_color_state(input, session, amr_fig_data,
+                                pick = "amr_color_pick", toggle = "amr_region_toggle")
+
+    # click the "GLM trend" legend entry to hide/show the forecast (dashed
+    # line + CI ribbon) for every region at once — AMR-specific, separate from
+    # the per-region toggle handled by region_color_state above.
+    trend_hidden <- reactiveVal(FALSE)
+    observeEvent(input$amr_trend_toggle, {
+      trend_hidden(!trend_hidden())
+    })
+
+    output$AMR_text <- renderText({ AMR_text_outline })
+    output$AMR_fig_text <- renderText({ AMR_fig_text_outline })
+
+    output$amr_d3 <- renderD3({
+      d <- amr_plot_data()
       pr <- suppressWarnings(as.numeric(d$Percent_resistant))
       ymax <- if (isTRUE(input$Zoom_switch_amr1) && any(!is.na(pr)))
         ceiling(max(pr, na.rm = TRUE) / 10) * 10 else 100
-      cols <- amr_cols()
-      hidden_list <- reactiveValuesToList(user_region_hidden)
-      hidden_regs <- names(hidden_list)[vapply(hidden_list, isTRUE, logical(1))]
       r2d3::r2d3(
         data = d,
         script = "www/amr_d3.js",   # read server-side by r2d3 (filesystem path, relative to app dir)
         d3_version = "5",
         options = list(
-          colors = as.list(cols),
+          colors = as.list(state$cols()),
           ymax = ymax,
           showSampleSizes = isTRUE(input$amr_ss1),
           chartType = if (isTRUE(input$amr_chart_type_radar)) "radar" else "curve",
           colorPickInputId = ns("amr_color_pick"),
           toggleInputId = ns("amr_region_toggle"),
-          hiddenRegions = as.list(hidden_regs),
+          hiddenRegions = as.list(state$hidden()),
           trendToggleInputId = ns("amr_trend_toggle"),
           trendHidden = isTRUE(trend_hidden())
         )
@@ -161,5 +147,11 @@ amrChartServer <- function(id, comparative_AMR_data) {
     # htmlwidgets inside an initially-hidden tab/box can stay blank until the user
     # interacts — compute eagerly so the D3 chart is ready when the tab is shown.
     outputOptions(output, "amr_d3", suspendWhenHidden = FALSE)
+
+    # exposed to the AMR/AMC comparison tab (src/compare_module.R)
+    list(
+      data = amr_plot_data,
+      years = reactive(input$year_amr1)
+    )
   })
 }

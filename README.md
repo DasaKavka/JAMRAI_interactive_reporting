@@ -27,7 +27,7 @@ If you are developing the scripts using github please create your own branch - y
 Go to https://atlas.ecdc.europa.eu/public/index.aspx
 → Select “Antimicrobial Resistance” in Health topic, make a selection in subpopulation and indicator (NB selection isn’t important for data download - as later can select additional pathogens/indicators) - click load data and it will “build the atlas”  
 → Go to Export data   
-→ Select options - all time periods, selected regions, selected indicator and select to download as csv file   
+→ Select options - all time periods, selected regions, select "All Indicators" - to download all AST results in one data set (note this also includes other pathogens) and select to download as csv file   
 → will then download as file “ECDC_surveillance_data_Antimicrobial_resistance.csv”   
 → can move this file to the Data/ folder in your R project folder  
 

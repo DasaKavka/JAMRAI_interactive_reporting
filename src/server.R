@@ -21,6 +21,14 @@ server <- function(input, output, session) {
   # 6A.2 AMC chart — a self-contained amcChartServer/amcChartUI instanceamc
   amcChartServer("chart2", Intersectoral_AMC)
 
+  # 6A.3 AMR/AMC comparison tab — unified view with shared region/year/type
+  # controls; the module does its own AMR + AMC filtering and joining.
+  # We pass the active sidebar tab so the r2d3 chart re-renders *while visible*
+  # when the user opens this tab (htmlwidgets otherwise defers the first render
+  # while the tab is hidden and can leave it blank).
+  compareChartServer("cmp", comparative_AMR_data, Intersectoral_AMC,
+                     active_tab = reactive(input$sbmenu))
+
 
   # 6.A 3 define reactive value contributors ----------------------------------
   

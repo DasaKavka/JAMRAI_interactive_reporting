@@ -6,18 +6,20 @@ sidebar <- dashboardSidebar(
   
   tagList(
     tags$head(
-      tags$link(rel = "stylesheet", type="text/css", href="style2_2.css"))),
+      tags$link(rel = "stylesheet", type="text/css", href="style2_2.css?v=3"))),
   
   sidebarMenu(id= "sbmenu",
               menuItem("Welcome", tabName = "Welcome", icon = icon("door-open", lib = "font-awesome", tabName = "Welcome")),
               menuItem("Methodology", tabName = "Methodology", icon = icon("calculator", lib = "font-awesome", tabName = "Methodology")),
               menuItem("AMR", icon = icon("bacteria", lib = "font-awesome"), tabName = "AMR"),
               menuItem("AMC", icon = icon("pills", lib = "font-awesome"), tabName = "AMC"),
+              menuItem("AMR/AMC", icon = icon("chart-simple", lib = "font-awesome"), tabName = "AMR_AMC"),
               menuItem("Contributors", icon = icon("server", lib = "font-awesome"), tabName = "contributors")
   )
 )
 
 body <- dashboardBody(
+  tags$script(src = "chart_common.js"),   # shared D3 primitives (window.JAMRAI) for every r2d3 chart
   tags$script(src = "app.js"),   # page-level JS: loading-logo swap + header subtitle (rendered once)
  # tags$head(includeHTML("google-analytics.html")), # update if want to include google analytics for your report
   # CSS (style2_2.css) is loaded via the header/sidebar tags$head
@@ -95,7 +97,22 @@ body <- dashboardBody(
               div(id = "amc_chart_block_chart2", class = "amc-chart-block",
                   amcChartUI("chart2"))
             )),
-    
+
+
+    # AMR/AMC comparison tab ---------------------------------------
+    # Unified view: shared controls (region / year / chart type) + AMR-/AMC-
+    # specific sub-selections, then one combined chart that switches between
+    # dual-axis bars, combined radar, and the Monnet quadrant scatter.
+    tabItem(tabName = "AMR_AMC",
+            fluidPage(
+              fluidRow(
+                column(12,
+                       h2("AMR × AMC — comparison"),
+                       compareChartUI("cmp"))
+              )
+            )),
+
+
     
     #  contributors tab layout ----------------------------------------------------
     tabItem(tabName = "contributors",

@@ -1,5 +1,5 @@
 // =====================================================================
-// amc_d3.js — r2d3 prototype for the JAMRAI AMR AMC dashboard
+// amc_d3.js — r2d3 prototype for the JAMRAI AMC dashboard
 // Faceted small-multiples, one panel per Host (species). Two chart types,
 // picked in R via options.chartType ("curve" | "radar") from the
 // "Chart type" toggle:
@@ -7,10 +7,16 @@
 //   - "radar": one closed polygon per region (years around the circle,
 //     radius = mg/kg).
 //
+// Shared primitives (num, colorFor, tooltip, colour picker, region legend)
+// live in www/chart_common.js -> window.JAMRAI. This file keeps only the
+// AMC-specific rendering.
+//
 // r2d3 injects into scope: svg, data, width, height, options, theme.
 // `data` is an array of row objects with columns:
 //   ...1,Year, icon, signif_level, label_icon, label, Host, mg_kg, Region
 // =====================================================================
+
+var J = window.JAMRAI;
 
 var colors = (options && options.colors) || {};            // { region: colour } supplied by R
 var ymax   = (options && options.ymax) ? +options.ymax : 175;
@@ -20,30 +26,20 @@ var chartType = (options && options.chartType) || "curve"; // "curve" | "radar"
 var colorPickInputId = (options && options.colorPickInputId) || "amc_color_pick";
 var toggleInputId    = (options && options.toggleInputId)    || "amc_region_toggle";
 
-var FONT    = "'ITC Avant Garde Gothic','Century Gothic','Segoe UI',sans-serif";
-var PALETTE = ["#078BAD", "#0FDBD5", "#1f77b4", "#e4572e", "#2ca02c", "#9467bd", "#8c564b", "#333333"];
+var FONT = J.FONT;
 
 // regions hidden by clicking their legend swatch/label (R supplies the list)
 var hiddenRegions = {};
 ((options && options.hiddenRegions) || []).forEach(function (r) { hiddenRegions[r] = true; });
 function isHidden(region) { return !!hiddenRegions[region]; }
 
-// hex helper for the native colour input
-function toHex6(c) {
-  if (typeof c === "string" && /^#[0-9a-fA-F]{6}$/.test(c)) return c.toLowerCase();
-  var col = d3.rgb(c);
-  function h(n) { n = Math.max(0, Math.min(255, Math.round(n))); return ("0" + n.toString(16)).slice(-2); }
-  return "#" + h(col.r) + h(col.g) + h(col.b);
-}
-
 svg.selectAll("*").remove();
 svg.style("font-family", FONT);
 
 // ---- coerce + clean -------------------------------------------------
-function num(v) { return (v === null || v === undefined || v === "" || isNaN(+v)) ? null : +v; }
 data.forEach(function (d) {
   d.Year = +d.Year;
-  d.mgkg = num(d.mg_kg);
+  d.mgkg = J.num(d.mg_kg);
 });
 
 var hosts   = Array.from(new Set(data.map(function (d) { return d.Host; })));
@@ -58,21 +54,10 @@ if (!data.length || !hosts.length || !years.length) {
 }
 
 // generic colour lookup — no hard-coded region names
-function colorFor(region) {
-  if (colors && colors[region]) return colors[region];
-  var i = regions.indexOf(region);
-  return PALETTE[(i >= 0 ? i : 0) % PALETTE.length];
-}
+function colorFor(region) { return J.colorFor(region, colors, regions); }
 
-// ---- tooltip --------------------------------------------------------
-var tip = d3.select("body").selectAll("div.d3tip-amc").data([0]);
-tip = tip.enter().append("div").attr("class", "d3tip-amc")
-  .style("position", "fixed").style("pointer-events", "none")
-  .style("background", "rgba(255,255,255,.97)").style("border", "1px solid #D6E4EA")
-  .style("border-radius", "8px").style("box-shadow", "0 4px 16px rgba(7,139,173,.20)")
-  .style("padding", "8px 11px").style("font", "12px " + FONT).style("color", "#0C5468")
-  .style("line-height", "1.45").style("z-index", 9999).style("opacity", 0)
-  .merge(tip);
+// shared tooltip singleton
+J.ensureTooltip();
 
 function tooltipHtml(host, d) {
   var val = d.mgkg !== null ? d.mgkg.toFixed(1) : "NA";
@@ -81,62 +66,16 @@ function tooltipHtml(host, d) {
     "<br>Consumption: <b>" + val + " mg/kg</b>";
 }
 
-function showTip(ev, html) {
-  if (!ev) return;
-  var t = d3.select("body").select("div.d3tip-amc");
-  if (t.empty()) return;
-  var tw = 200, tx = ev.clientX + 16, ty = ev.clientY + 12;
-  if (tx + tw > window.innerWidth) tx = ev.clientX - tw - 12;
-  t.style("opacity", 1).style("left", tx + "px").style("top", ty + "px").html(html);
-}
-function hideTip() {
-  d3.select("body").select("div.d3tip-amc").style("opacity", 0);
-}
-
-// ---- hidden native colour input ------------------------------------
-var picker = d3.select("body").selectAll("input.d3-legend-color").data([0]);
-picker = picker.enter().append("input")
-  .attr("class", "d3-legend-color").attr("type", "color")
-  .style("position", "fixed").style("width", "1px").style("height", "1px")
-  .style("opacity", 0).style("border", "0").style("padding", "0").style("z-index", 9999)
-  .merge(picker);
-var pickerNode = picker.node();
-
-// ---- legend ---------------------------------------------------------
+// ---- legend (shared region legend: hide/recolour) -------------------
 var legendH = 30;
 var lg = svg.append("g").attr("transform", "translate(14,18)");
-var lx = 0;
-
-regions.forEach(function (r) {
-  var hidden = isHidden(r);
-  var g = lg.append("g").attr("transform", "translate(" + lx + ",0)")
-    .style("opacity", hidden ? 0.35 : 1);
-
-  var toggleGroup = g.append("g").style("cursor", "pointer");
-  toggleGroup.append("title").text((hidden ? "Click to show " : "Click to hide ") + r);
-  toggleGroup.append("rect").attr("width", 14).attr("height", 14).attr("rx", 3).attr("y", -11)
-    .attr("fill", colorFor(r)).attr("stroke", "#9bbecb").attr("stroke-width", 1);
-  toggleGroup.append("text").attr("x", 20).attr("y", 1).attr("fill", "#0C5468")
-    .style("font-size", "12.5px").text(r);
-  toggleGroup.on("click", function () {
-    if (window.Shiny) Shiny.setInputValue(toggleInputId, r, { priority: "event" });
-  });
-
-  var pencilGroup = g.append("g").style("cursor", "pointer");
-  pencilGroup.append("title").text("Click to change the colour of " + r);
-  pencilGroup.append("text").attr("x", 24 + r.length * 7.4).attr("y", 1)
-    .attr("fill", "#9bbecb").style("font-size", "11px").text("✎");
-  pencilGroup.on("click", function () {
-    var ev = d3.event;
-    pickerNode.value = toHex6(colorFor(r));
-    if (ev) { pickerNode.style.left = ev.clientX + "px"; pickerNode.style.top = ev.clientY + "px"; }
-    pickerNode.onchange = function () {
-      if (window.Shiny) Shiny.setInputValue(colorPickInputId, { region: r, color: pickerNode.value }, { priority: "event" });
-    };
-    pickerNode.click();
-  });
-
-  lx += 44 + r.length * 8 + 22;
+J.drawRegionLegend(lg, {
+  regions: regions,
+  colorForR: colorFor,
+  isHidden: isHidden,
+  toggleInputId: toggleInputId,
+  colorPickInputId: colorPickInputId,
+  startX: 0
 });
 
 // ---- facet grid -----------------------------------------------------
@@ -208,11 +147,11 @@ function renderCurveFacets() {
       .style("cursor", "pointer")
       .on("mousemove", function (d) {
         d3.select(this).attr("opacity", 0.82);
-        showTip(d3.event, tooltipHtml(host, d));
+        J.showTip(d3.event, tooltipHtml(host, d));
       })
       .on("mouseleave", function () {
         d3.select(this).attr("opacity", 1);
-        hideTip();
+        J.hideTip();
       });
   });
 
@@ -305,8 +244,8 @@ function renderRadarFacets() {
         .attr("r", 3.5)
         .attr("fill", colorFor(r)).attr("stroke", "#fff").attr("stroke-width", 1)
         .style("cursor", "pointer")
-        .on("mousemove", function (d) { showTip(d3.event, tooltipHtml(host, d)); })
-        .on("mouseleave", hideTip);
+        .on("mousemove", function (d) { J.showTip(d3.event, tooltipHtml(host, d)); })
+        .on("mouseleave", J.hideTip);
     });
   });
 

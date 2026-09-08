@@ -8,6 +8,10 @@
 //   - "radar": one closed polygon per region (years around the circle,
 //     radius = observed % resistant).
 //
+// Shared primitives (num, colorFor, tooltip, colour picker, region legend)
+// live in www/chart_common.js -> window.JAMRAI. This file keeps only the
+// AMR-specific rendering (facets, bars/CI/trend, radar, GLM-trend legend).
+//
 // r2d3 injects into scope: svg, data, width, height, options, theme.
 // `data` is an array of row objects with columns:
 //   Year, Region, Host, Percent_resistant, Percent_resistant_predict,
@@ -15,6 +19,8 @@
 // Stats (GLM predictions, CIs) are computed in R — D3 only renders.
 // Written for D3 v5 (d3.mouse / function(d) handlers).
 // =====================================================================
+
+var J = window.JAMRAI;
 
 var colors = (options && options.colors) || {};            // { region: colour } supplied by R
 var ymax = (options && options.ymax) ? +options.ymax : 100;
@@ -26,8 +32,7 @@ var chartType = (options && options.chartType) || "curve"; // "curve" | "radar"
 var colorPickInputId = (options && options.colorPickInputId) || "amr_color_pick";
 var toggleInputId = (options && options.toggleInputId) || "amr_region_toggle";
 var trendToggleInputId = (options && options.trendToggleInputId) || "amr_trend_toggle";
-var FONT = "'ITC Avant Garde Gothic','Century Gothic','Segoe UI',sans-serif";
-var PALETTE = ["#078BAD", "#0FDBD5", "#1f77b4", "#e4572e", "#2ca02c", "#9467bd", "#8c564b", "#333333"];
+var FONT = J.FONT;
 
 // regions hidden by clicking their legend swatch/label (R supplies the list;
 // toggling sends a Shiny input so it survives the next re-render)
@@ -39,31 +44,18 @@ function isHidden(region) { return !!hiddenRegions[region]; }
 var trendHidden = !!(options && options.trendHidden);
 
 // generic colour lookup — no hard-coded region names; falls back to the palette by index
-function colorFor(region) {
-  if (colors && colors[region]) return colors[region];
-  var i = regions.indexOf(region);
-  return PALETTE[(i >= 0 ? i : 0) % PALETTE.length];
-}
-
-// hex helper for the native colour input
-function toHex6(c) {
-  if (typeof c === "string" && /^#[0-9a-fA-F]{6}$/.test(c)) return c.toLowerCase();
-  var col = d3.rgb(c);
-  function h(n) { n = Math.max(0, Math.min(255, Math.round(n))); return ("0" + n.toString(16)).slice(-2); }
-  return "#" + h(col.r) + h(col.g) + h(col.b);
-}
+function colorFor(region) { return J.colorFor(region, colors, regions); }
 
 svg.selectAll("*").remove();
 svg.style("font-family", FONT);
 
 // ---- coerce + clean -------------------------------------------------
-function num(v) { return (v === null || v === undefined || v === "" || isNaN(+v)) ? null : +v; }
 data.forEach(function (d) {
   d.Year = +d.Year;
-  d.obs  = num(d.Percent_resistant);
-  d.pred = num(d.Percent_resistant_predict);
-  d.lo   = num(d.CI_lower);
-  d.hi   = num(d.CI_upper);
+  d.obs  = J.num(d.Percent_resistant);
+  d.pred = J.num(d.Percent_resistant_predict);
+  d.lo   = J.num(d.CI_lower);
+  d.hi   = J.num(d.CI_upper);
 });
 
 var hosts   = Array.from(new Set(data.map(function (d) { return d.Host; })));
@@ -77,18 +69,10 @@ if (!data.length || !hosts.length || !years.length) {
   return;
 }
 
-// ---- tooltip (appended to <body>, position:fixed — robust, no reliance
-//      on the widget container being attached when the script first runs) ----
-var tip = d3.select("body").selectAll("div.d3tip-amr").data([0]);
-tip = tip.enter().append("div").attr("class", "d3tip-amr")
-  .style("position", "fixed").style("pointer-events", "none")
-  .style("background", "rgba(255,255,255,.97)").style("border", "1px solid #D6E4EA")
-  .style("border-radius", "8px").style("box-shadow", "0 4px 16px rgba(7,139,173,.20)")
-  .style("padding", "8px 11px").style("font", "12px " + FONT).style("color", "#0C5468")
-  .style("line-height", "1.45").style("z-index", 9999).style("opacity", 0)
-  .merge(tip);
+// shared tooltip singleton
+J.ensureTooltip();
 
-// shared tooltip content + show/hide, used by both the bars and the radar points
+// shared tooltip content used by both the bars and the radar points
 function tooltipHtml(host, d) {
   return "<b>" + host + "</b><br>" +
     "<span style='color:" + (colorFor(d.Region)) + ";font-weight:700'>" + d.Region + "</span> · " + d.Year +
@@ -97,63 +81,18 @@ function tooltipHtml(host, d) {
     (d.lo !== null ? "<br>95% CI: " + d.lo.toFixed(1) + "–" + d.hi.toFixed(1) + "%" : "") +
     (d.Sample_size ? "<br>n = " + d.Sample_size : "");
 }
-function showTip(ev, html) {
-  if (!ev) return;
-  var t = d3.select("body").select("div.d3tip-amr");
-  if (t.empty()) return;
-  var tw = 200, tx = ev.clientX + 16, ty = ev.clientY + 12;
-  if (tx + tw > window.innerWidth) tx = ev.clientX - tw - 12;
-  t.style("opacity", 1).style("left", tx + "px").style("top", ty + "px").html(html);
-}
-function hideTip() {
-  d3.select("body").select("div.d3tip-amr").style("opacity", 0);
-}
 
-// ---- hidden native colour input, opened by clicking a legend item ----------
-var picker = d3.select("body").selectAll("input.d3-legend-color").data([0]);
-picker = picker.enter().append("input")
-  .attr("class", "d3-legend-color").attr("type", "color")
-  .style("position", "fixed").style("width", "1px").style("height", "1px")
-  .style("opacity", 0).style("border", "0").style("padding", "0").style("z-index", 9999)
-  .merge(picker);
-var pickerNode = picker.node();
-
-// ---- legend (top): click the swatch/label to hide or show that region's
-//      curve(s); click the ✎ pencil to recolour. Hidden regions stay in the
-//      legend (dimmed) so they can be clicked again to bring them back. -----
+// ---- legend (top): shared region legend (hide/recolour) + AMR-specific
+//      "GLM trend" entry appended after it. -----------------------------
 var legendH = 30;
 var lg = svg.append("g").attr("transform", "translate(14,18)");
-var lx = 0;
-regions.forEach(function (r) {
-  var hidden = isHidden(r);
-  var g = lg.append("g").attr("transform", "translate(" + lx + ",0)")
-    .style("opacity", hidden ? 0.35 : 1);
-
-  var toggleGroup = g.append("g").style("cursor", "pointer");
-  toggleGroup.append("title").text((hidden ? "Click to show " : "Click to hide ") + r);
-  toggleGroup.append("rect").attr("width", 14).attr("height", 14).attr("rx", 3).attr("y", -11)
-    .attr("fill", colorFor(r)).attr("stroke", "#9bbecb").attr("stroke-width", 1);
-  toggleGroup.append("text").attr("x", 20).attr("y", 1).attr("fill", "#0C5468")
-    .style("font-size", "12.5px").text(r);
-  toggleGroup.on("click", function () {
-    if (window.Shiny) Shiny.setInputValue(toggleInputId, r, { priority: "event" });
-  });
-
-  var pencilGroup = g.append("g").style("cursor", "pointer");
-  pencilGroup.append("title").text("Click to change the colour of " + r);
-  pencilGroup.append("text").attr("x", 24 + r.length * 7.4).attr("y", 1)
-    .attr("fill", "#9bbecb").style("font-size", "11px").text("✎");
-  pencilGroup.on("click", function () {
-    var ev = d3.event;
-    pickerNode.value = toHex6(colorFor(r));
-    if (ev) { pickerNode.style.left = ev.clientX + "px"; pickerNode.style.top = ev.clientY + "px"; }
-    pickerNode.onchange = function () {
-      if (window.Shiny) Shiny.setInputValue(colorPickInputId, { region: r, color: pickerNode.value }, { priority: "event" });
-    };
-    pickerNode.click();
-  });
-
-  lx += 44 + r.length * 8 + 22;
+var lx = J.drawRegionLegend(lg, {
+  regions: regions,
+  colorForR: colorFor,
+  isHidden: isHidden,
+  toggleInputId: toggleInputId,
+  colorPickInputId: colorPickInputId,
+  startX: 0
 });
 
 // GLM trend/forecast: one legend entry, independent of the per-region toggle —
@@ -258,11 +197,11 @@ function renderCurveFacets() {
       .style("cursor", "pointer")
       .on("mousemove", function (d) {
         d3.select(this).attr("opacity", 0.82);
-        showTip(d3.event, tooltipHtml(host, d));
+        J.showTip(d3.event, tooltipHtml(host, d));
       })
       .on("mouseleave", function () {
         d3.select(this).attr("opacity", 1);
-        hideTip();
+        J.hideTip();
       });
 
     // sample-size labels on the Belgian bars (toggle "Show Belgian sample sizes")
@@ -391,8 +330,8 @@ function renderRadarFacets() {
         .attr("r", 3.5)
         .attr("fill", colorFor(r)).attr("stroke", "#fff").attr("stroke-width", 1)
         .style("cursor", "pointer")
-        .on("mousemove", function (d) { showTip(d3.event, tooltipHtml(host, d)); })
-        .on("mouseleave", hideTip);
+        .on("mousemove", function (d) { J.showTip(d3.event, tooltipHtml(host, d)); })
+        .on("mouseleave", J.hideTip);
     });
   });
 

@@ -20,7 +20,22 @@ body{
 	color: #078BAD;
 	border-color: #078BAD;
 	background-color: white;
-	padding:0px;}
+	padding:0px;
+	/* clear the fixed 61px-tall header so content starts below it */
+	padding-top: 61px;}
+
+/* Keep the top header fixed while scrolling (the sidebar is already fixed
+   below); only the central content scrolls underneath both. */
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1030;
+}
+/* the fixed header must overlap the fixed sidebar's top, not sit under it */
+.skin-blue .main-sidebar { z-index: 800; }
 
 /* Title */
 title{
