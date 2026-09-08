@@ -1,19 +1,35 @@
 # === text_content.R — editorial / methodology HTML text blocks ===
 
-Welcome_text <- "
-Here you can add text to welcome readers and outline the context/link to reports, e.g. for Belgium:
-<br/><br/>
-Antimicrobial agents are vital for treating and preventing the spread of diseases.  However, pathogens like bacteria and fungi can develop resistance to these drugs, especially in the face of antimicrobial overuse and misuse. 
-<br/><br/>
-A key step in the fight against antimicrobial resistance is the careful monitoring of drug usage and resistance patterns. This surveillance is key to both developing and monitoring the effect of interventions such as optimal treatment guidelines and infection prevention and control programs.
-<br/><br/>
-In Belgium, antimicrobial consumption (AMC) and the emergence of resistance (AMR) is monitored in various settings including human medicine, food-producing animals, and the food supply chain. Additionally, data is collected on the sales of antimicrobial products for all animals and for non-medical use (for example in agriculture), as well as the detection of antimicrobial residues in the environment. As the results from these diverse programs are reported separately, it can be challenging to gain a clear overview of the trends in AMR and AMC across sectors in Belgium.
-<br/><br/>
-The BELMAP report aims to provide this overview - comprehensively summarising results and trends from existing surveillance programs from all sectors and directing readers to the detailed sector-specific reporting. Cross-sectoral collaboration also allows the BELMAP network to identify potential gaps and make recommendations for
-improving future monitoring.
-<br/><br/>
-Visit the <a href='https://bit.ly/BELMAP2025'>interactive BELMAP report</a> to explore the most recent data on AMR and AMC in Belgium.
-<br/><br/>
+welcome_text <- "
+<h2>Welcome / Dobrodošli</h2>
+
+<p>Welcome to the Slovenian pilot dashboard for interactive One Health reporting of antimicrobial resistance (AMR).</p>
+
+<p>This dashboard was developed as part of the EU JAMRAI 2 project (WP8.4 Interactive Reporting) and represents a first Slovenian pilot for integrated AMR reporting. The current version focuses on selected antimicrobial resistance indicators in <i>Escherichia coli</i> from human and animal surveillance systems.</p>
+
+<p>Human AMR data are derived from EARS-Net data available through the ECDC Surveillance Atlas. Animal AMR data are derived from EFSA surveillance data on commensal <i>E. coli</i> in food-producing animals.</p>
+
+<p>For more information and access to the original datasets:<br>
+• ECDC Surveillance Atlas: https://atlas.ecdc.europa.eu/public/index.aspx<br>
+• EFSA Antimicrobial Resistance Dashboard: https://www.efsa.europa.eu/en/microstrategy/dashboard-antimicrobial-resistance
+</p>
+
+<p>This pilot dashboard serves as a starting point for discussion, collaboration and further development of integrated national One Health reporting in Slovenia.</p>
+
+<hr style='border: 1px solid #2e8b57;'>
+
+<p>Dobrodošli na slovenskem pilotnem interaktivnem prikazovalniku za poročanje o mikrobni odpornosti (AMR) po pristopu Eno zdravje (One Health).</p>
+
+<p>Prikazovalnik je bil razvit v okviru projekta EU JAMRAI 2 (WP8.4 Interactive Reporting) in predstavlja prvi slovenski pilotni primer integriranega poročanja o mikrobni odpornosti. Trenutna različica vključuje izbrane kazalnike odpornosti bakterije <i>Escherichia coli</i> iz humanega in veterinarskega sektorja.</p>
+
+<p>Podatki za humani sektor izhajajo iz mreže EARS-Net in so dostopni prek ECDC Surveillance Atlas. Podatki za veterinarski sektor temeljijo na podatkih EFSA o mikrobni odpornosti indikatorske komenzalne bakterije <i>E. coli</i> pri živalih za rejo hrane.</p>
+
+<p>Več informacij in dostop do izvornih podatkov:<br>
+• ECDC Surveillance Atlas: https://atlas.ecdc.europa.eu/public/index.aspx<br>
+• EFSA Dashboard za mikrobno odpornost: https://www.efsa.europa.eu/en/microstrategy/dashboard-antimicrobial-resistance
+</p>
+
+<p>Pilotni prikazovalnik predstavlja izhodišče za razpravo, sodelovanje in nadaljnji razvoj integriranega nacionalnega poročanja po pristopu Eno zdravje v Sloveniji.</p>
 "
 
 

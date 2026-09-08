@@ -14,8 +14,8 @@ amcChartUI <- function(id) {
                                   selected = c("Human"))),
       column(4,
              awesomeCheckboxGroup(ns("region_amc"), label = h3("Select Region"),
-                                  choices = c("Belgium", "Europe"),
-                                  selected = c("Belgium", "Europe")))
+                                  choices = c("Slovenia", "Europe"),
+                                  selected = c("Slovenia", "Europe")))
     ),
     
     div(class = "amc-controls",

@@ -440,7 +440,7 @@ AMC_vet <- read_csv("Data/Animal_mg_kg.csv") %>%
 
 #correlation tests human amc -------------
 
-# for Belgium -------------------
+# for Slovenia -------------------
 #Normality check
 qqnorm(AMC_human$Year, pch =1, frame = FALSE)
 qqline(AMC_human$Year, col = "steelblue", lwd = 2)
@@ -495,22 +495,29 @@ JIACRA_historic_human_EU <- JIACRA_historic_human %>%
   mutate(icon = "",
           Country = "EU",
           signif_level = "") %>%
-  dplyr::select(Year, Humans_mgkg,Country,icon,signif_level) %>%
+  dplyr::select(Year, Humans_mgkg,Country,icon,signif_level)
   
 
 
 
 # make dataset with label
 
-AMC_human_result <- AMC_human %>%
+  AMC_human_result <- AMC_human_SI %>%
   mutate(Humans_mgkg = `Volume (mg/kg)`) %>%
-  dplyr::select(Year, Humans_mgkg,Country) %>%
-  mutate(icon =  "downward_arrow",
-         signif_level = "***")
+  dplyr::select(Year, Humans_mgkg, Country) %>%
+  mutate(
+    icon = "",
+    signif_level = ""
+  )
 
-# write.csv(AMC_human_result,"AMC_human_results.csv")
-# write.table(JIACRA_historic_human_EU, file = "AMC_human_results.csv",
-#             sep=",",  col.names=FALSE, append = T)
+write.csv(AMC_human_result, "AMC_human_results.csv", row.names = FALSE)
+
+write.table(JIACRA_historic_human_EU,
+            file = "AMC_human_results.csv",
+            sep = ",",
+            col.names = FALSE,
+            row.names = FALSE,
+            append = TRUE)
 
 #correlation tests vet amc -------------
 
@@ -572,11 +579,13 @@ AMC_vet_EU <- read_csv("Data/Animal_mg_kg.csv") %>%
   
   # make dataset with label for veterinary
   
-  AMC_vet_result_Belgium <- AMC_vet %>%
-  dplyr::select(Year, Animals_mgkg,Country) %>%
-  mutate(icon =  "downward_arrow",
-         signif_level = "***")
-  
-  AMC_vet_results <- rbind(AMC_vet_result_Belgium,AMC_vet_EU)
+AMC_vet_result_Slovenia <- AMC_vet_SI %>%
+  dplyr::select(Year, Animals_mgkg, Country) %>%
+  mutate(
+    icon = "",
+    signif_level = ""
+  )
+
+AMC_vet_results <- rbind(AMC_vet_result_Slovenia, AMC_vet_EU)
 
 # write.csv(AMC_vet_results,"AMC_vet_results.csv")

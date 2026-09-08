@@ -4,33 +4,46 @@
 
 
 #make active product total volume human
+Human_AMC_raw <- read_csv("Data/Consumption_data/AMC_export_table_SI.CSV") %>%
+  mutate(Country = "Slovenia")
 
-Human_AMC_raw <- read_csv("Data/Consumption_data/AMC_export_table_BE.csv") %>%
-  mutate(Country = "Belgium")
-
-names(Human_AMC_raw) <- c("Year", "ATC", "Antimicrobial_class", "Tonnes", "Country")
+names(Human_AMC_raw) <- c(
+  "Year",
+  "ATC",
+  "Antimicrobial_class",
+  "Tonnes",
+  "Country"
+)
 
 annual_AMC_human <- Human_AMC_raw %>%
-  filter(grepl("J01",ATC)) %>%
-  group_by(Year,Country) %>%
-  summarise(Active_product_tonnes = sum(Tonnes)) %>%
-  filter(Year>2007) 
+  filter(grepl("J01", ATC)) %>%
+  group_by(Year, Country) %>%
+  summarise(
+    Active_product_tonnes = sum(Tonnes),
+    .groups = "drop"
+  ) %>%
+  filter(Year > 2007)
+
+
+# human population size
+
+Human_pop_size <- read_csv("Data/Consumption_data/demo_pjan_Eurostat_pop_SI.csv") %>%
+  filter(
+    !age %in% c("TOTAL", "UNK"),
+    sex %in% c("F", "M")
+  ) %>%
+  mutate(
+    Age = case_when(
+      age == "Y_LT1" ~ 0.5,
+      age == "Y_OPEN" ~ 100,
+      grepl("^Y[0-9]+$", age) ~ as.numeric(sub("^Y", "", age)),
+      TRUE ~ NA_real_
+    ),
+    Year = TIME_PERIOD
+  ) %>%
+  select(Year, Age, sex, OBS_VALUE)
 
 #human bodyweight -------------
-
-#human population size
-  Human_pop_size <- read_csv("Data/Consumption_data/demo_pjan_Eurostat_pop_BE.csv") %>%
-  filter(!grepl("Total|Unknown",age),
-         !grepl("Total|Unknown",sex)) %>%
-  mutate(Age = case_when(
-    grepl("Less than",age) ~ 0.5,
-    grepl("Open", age) ~ 100,
-    grepl("1 year$",age) ~ 1,
-    .default = as.numeric(gsub(" years","",age))
-  )) %>%
-  mutate(sex = if_else(sex == "males","M", "F"),
-         Year = TIME_PERIOD) %>% # for names to join with BW file
-  select(Year,Age,sex,OBS_VALUE)
 
 #human weight
 human_BW_av <- read.csv(paste0("Data/Consumption_data/EFSA_av_human_bodyweight.csv"),

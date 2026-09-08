@@ -24,8 +24,8 @@ amrChartUI <- function(id) {
                                   selected = c("Escherichia coli"))),
       column(4,
              awesomeCheckboxGroup(ns("region"), label = h3("Select Region"),
-                                  choices = c("Belgium", "Europe"),
-                                  selected = c("Belgium", "Europe")))
+                                  choices = c("Slovenia", "Europe"),
+                                  selected = c("Slovenia", "Europe")))
     ),
 
     div(class = "amr-controls",
@@ -33,7 +33,7 @@ amrChartUI <- function(id) {
           column(4,
                  materialSwitch(
                    inputId = ns("amr_ss1"),
-                   label = "Show Belgian sample sizes",
+                   label = "Show Slovenian sample sizes",
                    status = "primary",
                    right = TRUE
                  )),
@@ -105,7 +105,7 @@ amrChartServer <- function(id, comparative_AMR_data) {
                grepl(input$antibiotic, Antimicrobial),
                grepl(paste(input$host, collapse = "|"), Host))
       if (isTRUE(input$amr_ss1)) {
-        d <- d %>% mutate(Sample_size = if_else(grepl("Belgium", Region), as.character(Sample_size.x), ""))
+        d <- d %>% mutate(Sample_size = if_else(grepl("Slovenia", Region), as.character(Sample_size.x), ""))
       } else {
         d <- d %>% mutate(Sample_size = "")
       }
