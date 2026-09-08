@@ -33,10 +33,8 @@ Call:  glm.nb(formula = Number_resistants ~ Year_simple * Year_recent +
     link = log)
 
 Coefficients:
-             (Intercept)               Year_simple              Year_recentY  
-               -0.812235                  0.015165                 -0.017552  
-Year_simple:Year_recentY  
-               -0.008598  
+             (Intercept)               Year_simple              Year_recentY  Year_simple:Year_recentY  
+               -0.812235                  0.015165                 -0.017552                 -0.008598  
 
 Degrees of Freedom: 24 Total (i.e. Null);  21 Residual
 Null Deviance:	    81.15 

@@ -1,32 +1,32 @@
 
 Call:
 glm.nb(formula = Number_resistants ~ Year_simple * Year_recent + 
-    offset(log(Sample_size)), data = dataset_analysis, init.theta = 43571939.18, 
+    offset(log(Sample_size)), data = dataset_analysis, init.theta = 5208193.74, 
     link = log)
 
 Coefficients:
                           Estimate Std. Error z value Pr(>|z|)    
-(Intercept)              -0.403294   0.015974 -25.246  < 2e-16 ***
-Year_simple              -0.035490   0.006606  -5.373 7.76e-08 ***
-Year_recentY             -0.061577   0.064122  -0.960    0.337    
-Year_simple:Year_recentY  0.011702   0.010061   1.163    0.245    
+(Intercept)              -0.186640   0.032543  -5.735 9.74e-09 ***
+Year_simple              -0.008533   0.008511  -1.003    0.316    
+Year_recentY              0.197264   0.318362   0.620    0.536    
+Year_simple:Year_recentY -0.021849   0.029914  -0.730    0.465    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-(Dispersion parameter for Negative Binomial(43442061) family taken to be 1)
+(Dispersion parameter for Negative Binomial(5208773) family taken to be 1)
 
-    Null deviance: 176.9732  on 5  degrees of freedom
-Residual deviance:   4.7207  on 2  degrees of freedom
-AIC: 72.749
+    Null deviance: 14.9002  on 12  degrees of freedom
+Residual deviance:  6.7836  on  9  degrees of freedom
+AIC: 105.65
 
 Number of Fisher Scoring iterations: 1
 
 
-              Theta:  43571939 
-          Std. Err.:  3196038674 
+              Theta:  5208194 
+          Std. Err.:  184241806 
 Warning while fitting theta: alternation limit reached 
 
- 2 x log-likelihood:  -62.749 
+ 2 x log-likelihood:  -95.648 
 [1] "SELECTED MODEL----------------------------"
 
 Call:  glm(formula = Number_resistants ~ Year_simple + offset(log(Sample_size)), 
@@ -34,11 +34,11 @@ Call:  glm(formula = Number_resistants ~ Year_simple + offset(log(Sample_size)),
 
 Coefficients:
 (Intercept)  Year_simple  
-   -0.41251     -0.03034  
+   -0.17882     -0.01253  
 
-Degrees of Freedom: 5 Total (i.e. Null);  4 Residual
-Null Deviance:	    177 
-Residual Deviance: 6.075 	AIC: 68.1
+Degrees of Freedom: 12 Total (i.e. Null);  11 Residual
+Null Deviance:	    14.9 
+Residual Deviance: 7.426 	AIC: 100.3
 
 Call:
 glm(formula = Number_resistants ~ Year_simple + offset(log(Sample_size)), 
@@ -46,40 +46,40 @@ glm(formula = Number_resistants ~ Year_simple + offset(log(Sample_size)),
 
 Coefficients:
              Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -0.412510   0.013168  -31.33   <2e-16 ***
-Year_simple -0.030337   0.002328  -13.03   <2e-16 ***
+(Intercept) -0.178817   0.030227  -5.916  3.3e-09 ***
+Year_simple -0.012530   0.004599  -2.724  0.00644 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
-    Null deviance: 176.9841  on 5  degrees of freedom
-Residual deviance:   6.0748  on 4  degrees of freedom
-AIC: 68.102
+    Null deviance: 14.9010  on 12  degrees of freedom
+Residual deviance:  7.4257  on 11  degrees of freedom
+AIC: 100.29
 
 Number of Fisher Scoring iterations: 3
 
 [1] "TEST FOR DISPERSION-------------------- "
-[1] "dispersal parameter=  1.51984046333331 If >1 then overdispersed"
+[1] "dispersal parameter=  0.670380889421065 If >1 then overdispersed"
 
 	Overdispersion test
 
 data:  glmpoissonirr
-z = 0.036698, p-value = 0.4854
+z = -2.6596, p-value = 0.9961
 alternative hypothesis: true dispersion is greater than 1
 sample estimates:
 dispersion 
-  1.013748 
+ 0.5690469 
 
 
 	Underdispersion test
 
 data:  glmpoissonirr
-z = 0.036698, p-value = 0.5146
+z = -2.6596, p-value = 0.003912
 alternative hypothesis: true dispersion is less than 1
 sample estimates:
 dispersion 
-  1.013748 
+ 0.5690469 
 
 [1] "ANOVA COMPARING MODELS-------------------- "
 [1] "Likelihood Ratio Test Poisson vs NB model   "
@@ -88,8 +88,8 @@ Likelihood ratio test
 Model 1: Number_resistants ~ Year_simple + offset(log(Sample_size))
 Model 2: Number_resistants ~ Year_simple + offset(log(Sample_size))
   #Df  LogLik Df Chisq Pr(>Chisq)
-1   2 -32.051                    
-2   3 -32.051  1 9e-04     0.9762
+1   2 -48.145                    
+2   3 -48.145  1 3e-04     0.9869
 [1] "MODELS-------------------- "
 [1] "Output from Poisson model"
 
@@ -99,16 +99,16 @@ glm(formula = Number_resistants ~ Year_simple + offset(log(Sample_size)),
 
 Coefficients:
              Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -0.412510   0.013168  -31.33   <2e-16 ***
-Year_simple -0.030337   0.002328  -13.03   <2e-16 ***
+(Intercept) -0.178817   0.030227  -5.916  3.3e-09 ***
+Year_simple -0.012530   0.004599  -2.724  0.00644 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
-    Null deviance: 176.9841  on 5  degrees of freedom
-Residual deviance:   6.0748  on 4  degrees of freedom
-AIC: 68.102
+    Null deviance: 14.9010  on 12  degrees of freedom
+Residual deviance:  7.4257  on 11  degrees of freedom
+AIC: 100.29
 
 Number of Fisher Scoring iterations: 3
 
@@ -116,29 +116,29 @@ Number of Fisher Scoring iterations: 3
 
 Call:
 glm.nb(formula = Number_resistants ~ Year_simple + offset(log(Sample_size)), 
-    data = dataset_analysis, init.theta = 148446.4169, link = log)
+    data = dataset_analysis, init.theta = 4743600.71, link = log)
 
 Coefficients:
              Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -0.412536   0.013303  -31.01   <2e-16 ***
-Year_simple -0.030333   0.002348  -12.92   <2e-16 ***
+(Intercept) -0.178818   0.030229  -5.915 3.31e-09 ***
+Year_simple -0.012529   0.004599  -2.724  0.00645 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-(Dispersion parameter for Negative Binomial(148446.1) family taken to be 1)
+(Dispersion parameter for Negative Binomial(4743601) family taken to be 1)
 
-    Null deviance: 173.8248  on 5  degrees of freedom
-Residual deviance:   5.9714  on 4  degrees of freedom
-AIC: 70.101
+    Null deviance: 14.9001  on 12  degrees of freedom
+Residual deviance:  7.4254  on 11  degrees of freedom
+AIC: 102.29
 
 Number of Fisher Scoring iterations: 1
 
 
-              Theta:  148446 
-          Std. Err.:  5031043 
-Warning while fitting theta: alternation limit reached 
+              Theta:  4743601 
+          Std. Err.:  157729996 
+Warning while fitting theta: iteration limit reached 
 
- 2 x log-likelihood:  -64.101 
+ 2 x log-likelihood:  -96.29 
 [1] "Poisson ZI test= "
 NULL
 [1] "NB ZI test= "

@@ -1,0 +1,160 @@
+
+Call:
+glm.nb(formula = Number_resistants ~ Year_simple * Year_recent + 
+    offset(log(Sample_size)), data = dataset_analysis, init.theta = 119.4675763, 
+    link = log)
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)              -2.154504   0.063669 -33.839   <2e-16 ***
+Year_simple               0.046285   0.005427   8.528   <2e-16 ***
+Year_recentY              0.999337   0.731606   1.366   0.1720    
+Year_simple:Year_recentY -0.076903   0.035072  -2.193   0.0283 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(119.4676) family taken to be 1)
+
+    Null deviance: 101.232  on 23  degrees of freedom
+Residual deviance:  23.563  on 20  degrees of freedom
+AIC: 224.65
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  119.5 
+          Std. Err.:  53.4 
+
+ 2 x log-likelihood:  -214.646 
+[1] "SELECTED MODEL----------------------------"
+
+Call:  glm.nb(formula = Number_resistants ~ Year_simple * Year_recent + 
+    offset(log(Sample_size)), data = dataset_analysis, init.theta = 119.4675763, 
+    link = log)
+
+Coefficients:
+             (Intercept)               Year_simple              Year_recentY  Year_simple:Year_recentY  
+                -2.15450                   0.04628                   0.99934                  -0.07690  
+
+Degrees of Freedom: 23 Total (i.e. Null);  20 Residual
+Null Deviance:	    101.2 
+Residual Deviance: 23.56 	AIC: 224.6
+
+Call:
+glm.nb(formula = Number_resistants ~ Year_simple * Year_recent + 
+    offset(log(Sample_size)), data = dataset_analysis, init.theta = 119.4675763, 
+    link = log)
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)              -2.154504   0.063669 -33.839   <2e-16 ***
+Year_simple               0.046285   0.005427   8.528   <2e-16 ***
+Year_recentY              0.999337   0.731606   1.366   0.1720    
+Year_simple:Year_recentY -0.076903   0.035072  -2.193   0.0283 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(119.4676) family taken to be 1)
+
+    Null deviance: 101.232  on 23  degrees of freedom
+Residual deviance:  23.563  on 20  degrees of freedom
+AIC: 224.65
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  119.5 
+          Std. Err.:  53.4 
+
+ 2 x log-likelihood:  -214.646 
+[1] "TEST FOR DISPERSION-------------------- "
+[1] "dispersal parameter=  3.24154423184388 If >1 then overdispersed"
+
+	Overdispersion test
+
+data:  glmpoissonirr
+z = 1.5603, p-value = 0.05934
+alternative hypothesis: true dispersion is greater than 1
+sample estimates:
+dispersion 
+  2.722559 
+
+
+	Underdispersion test
+
+data:  glmpoissonirr
+z = 1.5603, p-value = 0.9407
+alternative hypothesis: true dispersion is less than 1
+sample estimates:
+dispersion 
+  2.722559 
+
+[1] "ANOVA COMPARING MODELS-------------------- "
+[1] "Likelihood Ratio Test Poisson vs NB model   "
+Likelihood ratio test
+
+Model 1: Number_resistants ~ Year_simple * Year_recent + offset(log(Sample_size))
+Model 2: Number_resistants ~ Year_simple * Year_recent + offset(log(Sample_size))
+  #Df  LogLik Df  Chisq Pr(>Chisq)    
+1   4 -118.17                         
+2   5 -107.32  1 21.701  3.186e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "MODELS-------------------- "
+[1] "Output from Poisson model"
+
+Call:
+glm(formula = Number_resistants ~ Year_simple * Year_recent + 
+    offset(log(Sample_size)), family = poisson(link = "log"), 
+    data = dataset_analysis)
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)              -2.070892   0.044554 -46.481  < 2e-16 ***
+Year_simple               0.038812   0.003428  11.321  < 2e-16 ***
+Year_recentY              0.917463   0.402915   2.277 0.022782 *  
+Year_simple:Year_recentY -0.069516   0.019371  -3.589 0.000332 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 236.773  on 23  degrees of freedom
+Residual deviance:  68.335  on 20  degrees of freedom
+AIC: 244.35
+
+Number of Fisher Scoring iterations: 4
+
+[1] "Output from Neg Binomial model"
+
+Call:
+glm.nb(formula = Number_resistants ~ Year_simple * Year_recent + 
+    offset(log(Sample_size)), data = dataset_analysis, init.theta = 119.4675763, 
+    link = log)
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)              -2.154504   0.063669 -33.839   <2e-16 ***
+Year_simple               0.046285   0.005427   8.528   <2e-16 ***
+Year_recentY              0.999337   0.731606   1.366   0.1720    
+Year_simple:Year_recentY -0.076903   0.035072  -2.193   0.0283 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(119.4676) family taken to be 1)
+
+    Null deviance: 101.232  on 23  degrees of freedom
+Residual deviance:  23.563  on 20  degrees of freedom
+AIC: 224.65
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  119.5 
+          Std. Err.:  53.4 
+
+ 2 x log-likelihood:  -214.646 
+[1] "Poisson ZI test= "
+NULL
+[1] "NB ZI test= "
+NULL

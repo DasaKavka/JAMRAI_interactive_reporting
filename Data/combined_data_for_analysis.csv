@@ -1,76 +1,76 @@
 Pathogen,Antimicrobial,Year,Sample_size,Percent_resistant,Surveillance,Host,Region
-Escherichia coli,Aminopenicillins,2001,220,52.72727272,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2002,1167,47.04370179,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2003,1309,49.73262032,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2004,1585,50.41009463,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2005,1579,52.69157694,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2006,1618,54.2645241,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2007,1446,57.1230982,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2008,1425,55.15789473,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2009,1607,55.94275046,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2010,1957,56.92386305,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2011,3507,58.65412033,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2012,3898,56.25962031,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2013,4350,56.78160919,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2014,2876,58.90125173,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2015,2674,58.04038893,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2016,3736,58.00321199,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2017,4669,57.46412508,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2018,4445,55.79302587,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2019,3601,56.45653985,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2020,4009,56.49787977,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2021,4389,55.20619731,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2022,4205,56.57550535,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2023,4648,55.65834767,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Aminopenicillins,2024,5300,57.33962264,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2001,191,8.90052356,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2002,952,13.23529411,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2003,1219,11.56685808,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2004,1333,15.37884471,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2005,1461,16.83778234,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2006,1554,19.36936936,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2007,1393,19.16726489,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2008,1324,16.8429003,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2009,1504,19.94680851,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2010,1782,21.54882154,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2011,3549,21.52719075,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2012,3515,22.16216216,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2013,4113,22.95161682,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2014,2599,26.70257791,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2015,2565,26.58869395,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2016,3854,24.54592631,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2017,4382,23.80191693,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2018,4211,21.80004749,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2019,3925,19.05732484,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2020,4320,18.0787037,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2021,4721,18.53420885,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2022,4536,17.54850088,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2023,4957,18.23683679,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Fluoroquinolones,2024,5313,20.38396386,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2001,222,1.8018018,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2002,1181,2.79424216,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2003,1316,3.49544072,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2004,1587,2.64650283,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2005,1577,3.61445783,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2006,1615,2.91021671,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2007,1451,3.92832529,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2008,1409,4.18736692,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2009,1596,6.45363408,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2010,1952,5.17418032,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2011,3985,6.04767879,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2012,4097,6.88308518,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2013,4051,7.99802517,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2014,2802,9.74304068,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2015,2593,9.67990744,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2016,3737,10.48969761,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2017,4672,9.73886986,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2018,4644,9.02239448,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2019,3937,9.98221996,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2020,4320,9.88425925,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2021,4721,8.26096166,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2022,4500,8.75555555,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2023,4956,10.08878127,EARS,human_Blood_CSF,Belgium
-Escherichia coli,Third-generation cephalosporins,2024,5311,11.91865938,EARS,human_Blood_CSF,Belgium
+Escherichia coli,Aminopenicillins,2001,398,44.4723618,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2002,409,43.27628361,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2003,401,41.39650872,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2004,573,39.61605584,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2005,656,42.07317073,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2006,717,44.35146443,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2007,851,49.1186839,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2008,874,49.42791762,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2009,893,52.85554311,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2010,941,48.03400637,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2011,1002,53.89221556,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2012,1168,50.42808219,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2013,1224,51.47058823,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2014,1216,52.63157894,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2015,1326,54.826546,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2016,1420,57.11267605,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2017,1435,51.56794425,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2018,1668,53.47721822,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2019,1610,51.67701863,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2020,1617,51.26777983,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2021,1681,50.80309339,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2022,1659,49.00542495,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2023,1639,48.99328859,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Aminopenicillins,2024,1709,49.97074312,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2001,398,8.040201,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2002,409,11.98044009,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2003,401,11.22194513,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2004,573,12.39092495,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2005,657,12.02435312,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2006,717,15.20223152,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2007,851,17.15628672,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2008,874,16.93363844,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2009,893,18.2530795,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2010,952,19.32773109,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2011,1002,20.65868263,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2012,1168,21.40410958,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2013,1224,19.85294117,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2014,1216,23.27302631,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2015,1325,24.60377358,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2016,1420,25.56338028,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2017,1383,24.87346348,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2018,1668,22.78177458,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2019,1610,19.00621118,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2020,1617,18.11997526,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2021,1681,16.65675193,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2022,1660,16.56626506,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2023,1639,15.92434411,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Fluoroquinolones,2024,1709,15.91574019,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2001,398,0.25125628,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2002,409,1.22249388,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2003,401,0.74812967,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2004,573,1.39616055,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2005,657,1.67427701,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2006,717,1.67364016,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2007,851,4.23031727,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2008,874,4.23340961,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2009,893,4.59126539,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2010,952,6.61764705,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2011,1002,8.78243512,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2012,1168,9.50342465,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2013,1224,8.74183006,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2014,1216,12.74671052,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2015,1326,13.65007541,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2016,1420,12.53521126,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2017,1435,12.47386759,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2018,1668,11.33093525,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2019,1610,9.81366459,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2020,1617,10.57513914,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2021,1681,9.28019036,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2022,1660,9.33734939,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2023,1639,8.6638194,EARS,human_Blood_CSF,Slovenia
+Escherichia coli,Third-generation cephalosporins,2024,1709,9.06963136,EARS,human_Blood_CSF,Slovenia
 Acinetobacter spp.,Fluoroquinolones,2012,3213,66.4488017429194,EARS,human_Blood_CSF,Europe
 Acinetobacter spp.,Fluoroquinolones,2013,4143,58.58073859522085,EARS,human_Blood_CSF,Europe
 Acinetobacter spp.,Fluoroquinolones,2014,4265,59.460726846424386,EARS,human_Blood_CSF,Europe
@@ -269,105 +269,105 @@ Pseudomonas aeruginosa,Fluoroquinolones,2021,22489,17.07056783316288,EARS,human_
 Pseudomonas aeruginosa,Fluoroquinolones,2022,23874,17.215380748931892,EARS,human_Blood_CSF,Europe
 Pseudomonas aeruginosa,Fluoroquinolones,2023,21979,17.011692979662403,EARS,human_Blood_CSF,Europe
 Pseudomonas aeruginosa,Fluoroquinolones,2024,27935,14.433506354036155,EARS,human_Blood_CSF,Europe
-Escherichia coli,Aminopenicillins,2011,836,85,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2012,325,80,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2014,158,73,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2015,152,76,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2016,151,82,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2017,160,78,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2018,146,84,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2019,169,79,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2020,165,82,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2021,170,65,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2022,168,79,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2023,171,69,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2024,170,69,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2011,836,63,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2012,325,78,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2014,158,70,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2015,152,64,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2016,151,56,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2017,160,58,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2018,146,60,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2019,169,56,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2020,165,50,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2021,170,42,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2022,168,54,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2023,171,46,EFSA,broilers,Belgium
-Escherichia coli,Fluoroquinolones,2024,170,48,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2011,836,19,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2012,325,28,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2014,158,8,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2015,152,5,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2016,151,1,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2017,160,18,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2018,146,15,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2019,169,8,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2020,165,7,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2021,170,5,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2022,168,4,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2023,171,3,EFSA,broilers,Belgium
-Escherichia coli,Third-generation cephalosporins,2024,170,2,EFSA,broilers,Belgium
-Escherichia coli,Aminopenicillins,2011,308,25,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2015,196,58,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2016,167,54,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2017,185,57,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2019,172,67,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2020,168,56,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2021,173,50,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2022,166,60,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2023,171,43,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2024,171,43,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2011,308,11,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2015,196,24,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2016,167,19,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2017,185,20,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2019,172,24,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2020,168,17,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2021,173,19,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2022,166,25,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2023,171,18,EFSA,calves,Belgium
-Escherichia coli,Fluoroquinolones,2024,171,22,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2011,308,5,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2015,196,3,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2016,167,0,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2017,185,3,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2019,172,2,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2020,168,1,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2021,173,2,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2022,166,1,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2023,171,0,EFSA,calves,Belgium
-Escherichia coli,Third-generation cephalosporins,2024,171,3,EFSA,calves,Belgium
-Escherichia coli,Aminopenicillins,2011,312,49,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2015,186,35,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2016,169,46,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2017,176,51,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2019,175,39,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2020,170,53,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2021,170,30,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2022,168,49,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2023,176,31,EFSA,fattening pigs,Belgium
-Escherichia coli,Aminopenicillins,2024,170,34,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2011,312,14,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2015,186,2,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2016,169,5,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2017,176,9,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2019,175,9,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2020,170,7,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2021,170,4,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2022,168,11,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2023,176,7,EFSA,fattening pigs,Belgium
-Escherichia coli,Fluoroquinolones,2024,170,5,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2011,312,4,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2015,186,1,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2016,169,0,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2017,176,7,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2019,175,1,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2020,170,0,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2021,170,0,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2022,168,3,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2023,176,0,EFSA,fattening pigs,Belgium
-Escherichia coli,Third-generation cephalosporins,2024,170,0,EFSA,fattening pigs,Belgium
+Escherichia coli,Aminopenicillins,2011,836,85,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2012,325,80,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2014,158,73,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2015,152,76,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2016,151,82,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2017,160,78,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2018,146,84,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2019,169,79,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2020,165,82,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2021,170,65,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2022,168,79,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2023,171,69,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2024,170,69,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2011,836,63,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2012,325,78,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2014,158,70,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2015,152,64,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2016,151,56,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2017,160,58,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2018,146,60,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2019,169,56,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2020,165,50,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2021,170,42,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2022,168,54,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2023,171,46,EFSA,broilers,Slovenia
+Escherichia coli,Fluoroquinolones,2024,170,48,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2011,836,19,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2012,325,28,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2014,158,8,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2015,152,5,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2016,151,1,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2017,160,18,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2018,146,15,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2019,169,8,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2020,165,7,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2021,170,5,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2022,168,4,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2023,171,3,EFSA,broilers,Slovenia
+Escherichia coli,Third-generation cephalosporins,2024,170,2,EFSA,broilers,Slovenia
+Escherichia coli,Aminopenicillins,2011,308,25,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2015,196,58,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2016,167,54,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2017,185,57,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2019,172,67,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2020,168,56,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2021,173,50,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2022,166,60,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2023,171,43,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2024,171,43,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2011,308,11,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2015,196,24,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2016,167,19,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2017,185,20,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2019,172,24,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2020,168,17,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2021,173,19,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2022,166,25,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2023,171,18,EFSA,calves,Slovenia
+Escherichia coli,Fluoroquinolones,2024,171,22,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2011,308,5,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2015,196,3,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2016,167,0,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2017,185,3,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2019,172,2,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2020,168,1,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2021,173,2,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2022,166,1,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2023,171,0,EFSA,calves,Slovenia
+Escherichia coli,Third-generation cephalosporins,2024,171,3,EFSA,calves,Slovenia
+Escherichia coli,Aminopenicillins,2011,312,49,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2015,186,35,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2016,169,46,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2017,176,51,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2019,175,39,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2020,170,53,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2021,170,30,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2022,168,49,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2023,176,31,EFSA,fattening pigs,Slovenia
+Escherichia coli,Aminopenicillins,2024,170,34,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2011,312,14,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2015,186,2,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2016,169,5,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2017,176,9,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2019,175,9,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2020,170,7,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2021,170,4,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2022,168,11,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2023,176,7,EFSA,fattening pigs,Slovenia
+Escherichia coli,Fluoroquinolones,2024,170,5,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2011,312,4,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2015,186,1,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2016,169,0,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2017,176,7,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2019,175,1,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2020,170,0,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2021,170,0,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2022,168,3,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2023,176,0,EFSA,fattening pigs,Slovenia
+Escherichia coli,Third-generation cephalosporins,2024,170,0,EFSA,fattening pigs,Slovenia
 Escherichia coli,Aminopenicillins,2014,5046,59,EFSA,broilers,Europe
 Escherichia coli,Aminopenicillins,2016,4727,58,EFSA,broilers,Europe
 Escherichia coli,Aminopenicillins,2018,4255,53,EFSA,broilers,Europe

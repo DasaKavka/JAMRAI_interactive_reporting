@@ -164,10 +164,12 @@ load_all_amr_2025 <- function(data_dir = here::here("Data")) {
 
 #3. combine data ------------
 
- AMR_comparative_interactive <- rbind(ECDC_data_BE,ECDC_data_EU,EFSA_amr_2025)
+ AMR_comparative_interactive <- rbind(ECDC_data_SI,ECDC_data_EU,EFSA_amr_2025)
 
  write_csv(AMR_comparative_interactive, "Data/combined_data_for_analysis.csv")
  
 
  
+ 
+
  
