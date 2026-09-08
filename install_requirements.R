@@ -13,7 +13,7 @@ required_packages <- c(
   "lwgeom", "gdalUtilities", "cowplot", "magick", "patchwork", 
   "jpeg", "scales", "extrafont", "remotes", "extrafontdb", 
   "ggpattern", "ggtext", "showtext", "flextable", "ggnewscale", 
-  "ftExtra", "gotop"
+  "ftExtra", "gotop", "r2d3"
 )
 
 # Installe les packages manquants

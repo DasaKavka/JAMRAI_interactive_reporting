@@ -1,0 +1,241 @@
+Year,ATCCode,ATC code name,tonnes per year
+2005,A07A,Intestinal antiinfectives,0.107
+2005,J01A,Tetracyclines,0.007
+2005,J01B,Amphenicols,0.006
+2005,J01C,"Beta-lactam antibacterials, penicillins",9.963
+2005,J01D,Other beta-lactam antibacterials,4.018
+2005,J01E,Sulfonamides and trimethoprim,0.200
+2005,J01F,"Macrolides, lincosamides and streptogramins",0.320
+2005,J01G,Aminoglycoside antibacterials,0.190
+2005,J01M,Quinolone antibacterials,0.643
+2005,J01R,Combinations of antibacterials,0.000
+2005,J01X,Other antibacterials,0.524
+2005,P01A,Agents against amoebiasis and other protozoal diseases,0.123
+2006,A07A,Intestinal antiinfectives,0.000
+2006,J01A,Tetracyclines,0.013
+2006,J01B,Amphenicols,0.006
+2006,J01C,"Beta-lactam antibacterials, penicillins",9.519
+2006,J01D,Other beta-lactam antibacterials,3.856
+2006,J01E,Sulfonamides and trimethoprim,0.234
+2006,J01F,"Macrolides, lincosamides and streptogramins",0.326
+2006,J01G,Aminoglycoside antibacterials,0.177
+2006,J01M,Quinolone antibacterials,0.657
+2006,J01R,Combinations of antibacterials,0.000
+2006,J01X,Other antibacterials,0.594
+2006,P01A,Agents against amoebiasis and other protozoal diseases,0.126
+2007,A07A,Intestinal antiinfectives,0.475
+2007,J01A,Tetracyclines,2.015
+2007,J01B,Amphenicols,0.134
+2007,J01C,"Beta-lactam antibacterials, penicillins",63.170
+2007,J01D,Other beta-lactam antibacterials,9.407
+2007,J01E,Sulfonamides and trimethoprim,2.938
+2007,J01F,"Macrolides, lincosamides and streptogramins",6.391
+2007,J01G,Aminoglycoside antibacterials,0.178
+2007,J01M,Quinolone antibacterials,6.853
+2007,J01R,Combinations of antibacterials,0.000
+2007,J01X,Other antibacterials,3.279
+2007,P01A,Agents against amoebiasis and other protozoal diseases,0.926
+2008,A07A,Intestinal antiinfectives,0.433
+2008,J01A,Tetracyclines,2.413
+2008,J01B,Amphenicols,0.121
+2008,J01C,"Beta-lactam antibacterials, penicillins",71.226
+2008,J01D,Other beta-lactam antibacterials,8.375
+2008,J01E,Sulfonamides and trimethoprim,3.053
+2008,J01F,"Macrolides, lincosamides and streptogramins",6.743
+2008,J01G,Aminoglycoside antibacterials,0.156
+2008,J01M,Quinolone antibacterials,7.374
+2008,J01R,Combinations of antibacterials,0.000
+2008,J01X,Other antibacterials,3.568
+2008,P01A,Agents against amoebiasis and other protozoal diseases,1.040
+2009,A07A,Intestinal antiinfectives,0.379
+2009,J01A,Tetracyclines,2.441
+2009,J01B,Amphenicols,0.138
+2009,J01C,"Beta-lactam antibacterials, penicillins",71.064
+2009,J01D,Other beta-lactam antibacterials,8.474
+2009,J01E,Sulfonamides and trimethoprim,0.000
+2009,J01F,"Macrolides, lincosamides and streptogramins",6.991
+2009,J01G,Aminoglycoside antibacterials,0.155
+2009,J01M,Quinolone antibacterials,7.665
+2009,J01R,Combinations of antibacterials,0.000
+2009,J01X,Other antibacterials,3.795
+2009,P01A,Agents against amoebiasis and other protozoal diseases,0.969
+2010,A07A,Intestinal antiinfectives,0.000
+2010,J01A,Tetracyclines,2.557
+2010,J01B,Amphenicols,0.203
+2010,J01C,"Beta-lactam antibacterials, penicillins",76.996
+2010,J01D,Other beta-lactam antibacterials,7.909
+2010,J01E,Sulfonamides and trimethoprim,2.158
+2010,J01F,"Macrolides, lincosamides and streptogramins",7.006
+2010,J01G,Aminoglycoside antibacterials,0.144
+2010,J01M,Quinolone antibacterials,7.906
+2010,J01R,Combinations of antibacterials,0.000
+2010,J01X,Other antibacterials,3.950
+2010,P01A,Agents against amoebiasis and other protozoal diseases,1.113
+2011,A07A,Intestinal antiinfectives,0.000
+2011,J01A,Tetracyclines,2.628
+2011,J01B,Amphenicols,0.198
+2011,J01C,"Beta-lactam antibacterials, penicillins",79.147
+2011,J01D,Other beta-lactam antibacterials,7.803
+2011,J01E,Sulfonamides and trimethoprim,2.566
+2011,J01F,"Macrolides, lincosamides and streptogramins",7.415
+2011,J01G,Aminoglycoside antibacterials,0.142
+2011,J01M,Quinolone antibacterials,8.084
+2011,J01R,Combinations of antibacterials,0.000
+2011,J01X,Other antibacterials,4.142
+2011,P01A,Agents against amoebiasis and other protozoal diseases,1.013
+2012,A07A,Intestinal antiinfectives,0.000
+2012,J01A,Tetracyclines,2.722
+2012,J01B,Amphenicols,0.200
+2012,J01C,"Beta-lactam antibacterials, penicillins",81.511
+2012,J01D,Other beta-lactam antibacterials,7.944
+2012,J01E,Sulfonamides and trimethoprim,0.000
+2012,J01F,"Macrolides, lincosamides and streptogramins",7.780
+2012,J01G,Aminoglycoside antibacterials,0.133
+2012,J01M,Quinolone antibacterials,8.106
+2012,J01R,Combinations of antibacterials,0.000
+2012,J01X,Other antibacterials,4.272
+2012,P01A,Agents against amoebiasis and other protozoal diseases,1.170
+2013,A07A,Intestinal antiinfectives,0.000
+2013,J01A,Tetracyclines,2.824
+2013,J01B,Amphenicols,0.198
+2013,J01C,"Beta-lactam antibacterials, penicillins",71.903
+2013,J01D,Other beta-lactam antibacterials,7.950
+2013,J01E,Sulfonamides and trimethoprim,2.134
+2013,J01F,"Macrolides, lincosamides and streptogramins",7.593
+2013,J01G,Aminoglycoside antibacterials,0.112
+2013,J01M,Quinolone antibacterials,7.827
+2013,J01R,Combinations of antibacterials,0.000
+2013,J01X,Other antibacterials,4.442
+2013,P01A,Agents against amoebiasis and other protozoal diseases,1.192
+2014,A07A,Intestinal antiinfectives,0.000
+2014,J01A,Tetracyclines,2.837
+2014,J01B,Amphenicols,0.173
+2014,J01C,"Beta-lactam antibacterials, penicillins",72.640
+2014,J01D,Other beta-lactam antibacterials,7.668
+2014,J01E,Sulfonamides and trimethoprim,1.409
+2014,J01F,"Macrolides, lincosamides and streptogramins",7.611
+2014,J01G,Aminoglycoside antibacterials,0.101
+2014,J01M,Quinolone antibacterials,7.688
+2014,J01R,Combinations of antibacterials,0.000
+2014,J01X,Other antibacterials,4.598
+2014,P01A,Agents against amoebiasis and other protozoal diseases,1.213
+2015,A07A,Intestinal antiinfectives,0.024
+2015,J01A,Tetracyclines,2.671
+2015,J01B,Amphenicols,0.168
+2015,J01C,"Beta-lactam antibacterials, penicillins",74.438
+2015,J01D,Other beta-lactam antibacterials,7.808
+2015,J01E,Sulfonamides and trimethoprim,1.646
+2015,J01F,"Macrolides, lincosamides and streptogramins",7.942
+2015,J01G,Aminoglycoside antibacterials,0.092
+2015,J01M,Quinolone antibacterials,7.725
+2015,J01R,Combinations of antibacterials,0.000
+2015,J01X,Other antibacterials,4.584
+2015,P01A,Agents against amoebiasis and other protozoal diseases,1.247
+2016,A07A,Intestinal antiinfectives,0.540
+2016,J01A,Tetracyclines,2.647
+2016,J01B,Amphenicols,0.114
+2016,J01C,"Beta-lactam antibacterials, penicillins",75.878
+2016,J01D,Other beta-lactam antibacterials,7.347
+2016,J01E,Sulfonamides and trimethoprim,1.910
+2016,J01F,"Macrolides, lincosamides and streptogramins",7.785
+2016,J01G,Aminoglycoside antibacterials,0.094
+2016,J01M,Quinolone antibacterials,7.366
+2016,J01R,Combinations of antibacterials,0.000
+2016,J01X,Other antibacterials,4.550
+2016,P01A,Agents against amoebiasis and other protozoal diseases,1.236
+2017,A07A,Intestinal antiinfectives,0.530
+2017,J01A,Tetracyclines,2.562
+2017,J01B,Amphenicols,0.110
+2017,J01C,"Beta-lactam antibacterials, penicillins",73.268
+2017,J01D,Other beta-lactam antibacterials,6.848
+2017,J01E,Sulfonamides and trimethoprim,1.772
+2017,J01F,"Macrolides, lincosamides and streptogramins",7.345
+2017,J01G,Aminoglycoside antibacterials,0.088
+2017,J01M,Quinolone antibacterials,6.851
+2017,J01R,Combinations of antibacterials,0.000
+2017,J01X,Other antibacterials,4.518
+2017,P01A,Agents against amoebiasis and other protozoal diseases,1.236
+2018,A07A,Intestinal antiinfectives,0.514
+2018,J01A,Tetracyclines,2.447
+2018,J01B,Amphenicols,0.105
+2018,J01C,"Beta-lactam antibacterials, penicillins",76.207
+2018,J01D,Other beta-lactam antibacterials,7.052
+2018,J01E,Sulfonamides and trimethoprim,1.989
+2018,J01F,"Macrolides, lincosamides and streptogramins",7.558
+2018,J01G,Aminoglycoside antibacterials,0.086
+2018,J01M,Quinolone antibacterials,3.840
+2018,J01R,Combinations of antibacterials,0.000
+2018,J01X,Other antibacterials,4.774
+2018,P01A,Agents against amoebiasis and other protozoal diseases,1.233
+2019,A07A,Intestinal antiinfectives,0.545
+2019,J01A,Tetracyclines,2.493
+2019,J01B,Amphenicols,0.101
+2019,J01C,"Beta-lactam antibacterials, penicillins",74.285
+2019,J01D,Other beta-lactam antibacterials,6.883
+2019,J01E,Sulfonamides and trimethoprim,2.079
+2019,J01F,"Macrolides, lincosamides and streptogramins",7.471
+2019,J01G,Aminoglycoside antibacterials,0.081
+2019,J01M,Quinolone antibacterials,2.214
+2019,J01R,Combinations of antibacterials,0.000
+2019,J01X,Other antibacterials,4.973
+2019,P01A,Agents against amoebiasis and other protozoal diseases,1.262
+2020,A07A,Intestinal antiinfectives,0.547
+2020,J01A,Tetracyclines,2.349
+2020,J01B,Amphenicols,0.066
+2020,J01C,"Beta-lactam antibacterials, penicillins",56.209
+2020,J01D,Other beta-lactam antibacterials,5.548
+2020,J01E,Sulfonamides and trimethoprim,2.132
+2020,J01F,"Macrolides, lincosamides and streptogramins",5.826
+2020,J01G,Aminoglycoside antibacterials,0.073
+2020,J01M,Quinolone antibacterials,1.880
+2020,J01R,Combinations of antibacterials,0.000
+2020,J01X,Other antibacterials,4.816
+2020,P01A,Agents against amoebiasis and other protozoal diseases,1.100
+2021,A07A,Intestinal antiinfectives,0.585
+2021,J01A,Tetracyclines,2.538
+2021,J01B,Amphenicols,0.063
+2021,J01C,"Beta-lactam antibacterials, penicillins",60.116
+2021,J01D,Other beta-lactam antibacterials,5.769
+2021,J01E,Sulfonamides and trimethoprim,2.296
+2021,J01F,"Macrolides, lincosamides and streptogramins",5.761
+2021,J01G,Aminoglycoside antibacterials,0.076
+2021,J01M,Quinolone antibacterials,1.853
+2021,J01R,Combinations of antibacterials,0.000
+2021,J01X,Other antibacterials,4.991
+2021,P01A,Agents against amoebiasis and other protozoal diseases,1.206
+2022,A07A,Intestinal antiinfectives,0.626
+2022,J01A,Tetracyclines,2.266
+2022,J01B,Amphenicols,0.083
+2022,J01C,"Beta-lactam antibacterials, penicillins",74.670
+2022,J01D,Other beta-lactam antibacterials,6.195
+2022,J01E,Sulfonamides and trimethoprim,2.434
+2022,J01F,"Macrolides, lincosamides and streptogramins",6.932
+2022,J01G,Aminoglycoside antibacterials,0.075
+2022,J01M,Quinolone antibacterials,1.914
+2022,J01R,Combinations of antibacterials,0.000
+2022,J01X,Other antibacterials,5.067
+2022,P01A,Agents against amoebiasis and other protozoal diseases,1.268
+2023,A07A,Intestinal antiinfectives,0.691
+2023,J01A,Tetracyclines,2.323
+2023,J01B,Amphenicols,0.090
+2023,J01C,"Beta-lactam antibacterials, penicillins",77.601
+2023,J01D,Other beta-lactam antibacterials,5.989
+2023,J01E,Sulfonamides and trimethoprim,2.714
+2023,J01F,"Macrolides, lincosamides and streptogramins",7.411
+2023,J01G,Aminoglycoside antibacterials,0.068
+2023,J01M,Quinolone antibacterials,1.892
+2023,J01R,Combinations of antibacterials,0.000
+2023,J01X,Other antibacterials,5.123
+2023,P01A,Agents against amoebiasis and other protozoal diseases,1.335
+2024,A07A,Intestinal antiinfectives,0.842
+2024,J01A,Tetracyclines,2.456
+2024,J01B,Amphenicols,0.095
+2024,J01C,"Beta-lactam antibacterials, penicillins",74.570
+2024,J01D,Other beta-lactam antibacterials,5.920
+2024,J01E,Sulfonamides and trimethoprim,2.759
+2024,J01F,"Macrolides, lincosamides and streptogramins",7.406
+2024,J01G,Aminoglycoside antibacterials,0.066
+2024,J01M,Quinolone antibacterials,1.777
+2024,J01R,Combinations of antibacterials,0.000
+2024,J01X,Other antibacterials,5.277
+2024,P01A,Agents against amoebiasis and other protozoal diseases,1.381
